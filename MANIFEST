@@ -1,3 +1,5 @@
+README.md
+example/examples.txt
 lib/App/GitHooks/Plugin/PerlCompile.pm
 t/00-load.t
 t/03-get_file_check_description.t
