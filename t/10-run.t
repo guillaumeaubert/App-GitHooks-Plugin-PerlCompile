@@ -3,6 +3,8 @@
 use strict;
 use warnings;
 
+# Note: don't include Test::FailWarnings here as it interferes with
+# Capture::Tiny.
 use Capture::Tiny;
 use Test::Exception;
 use Test::Git;
