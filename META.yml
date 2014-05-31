@@ -1,0 +1,36 @@
+---
+abstract: 'Verify that Perl files compile without errors.'
+author:
+  - 'Guillaume Aubert <aubertg@cpan.org>'
+build_requires:
+  Capture::Tiny: '0'
+  Test::Exception: '0'
+  Test::FailWarnings: '0'
+  Test::Git: '0'
+  Test::More: '0.94'
+  Test::Type: '0'
+configure_requires:
+  Module::Build: '0'
+dynamic_config: 1
+generated_by: 'Module::Build version 0.4205, CPAN::Meta::Converter version 2.140640'
+license: gpl
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: '1.4'
+name: App-GitHooks-Plugin-PerlCompile
+provides:
+  App::GitHooks::Plugin::PerlCompile:
+    file: lib/App/GitHooks/Plugin/PerlCompile.pm
+    version: v0.1.0
+requires:
+  App::GitHooks: '0'
+  Carp: '0'
+  File::Slurp: '0'
+  System::Command: '0'
+  perl: '5.006'
+resources:
+  bugtracker: https://github.com/guillaumeaubert/App-GitHooks-Plugin-PerlCompile/issues
+  homepage: https://metacpan.org/release/App-GitHooks-Plugin-PerlCompile
+  license: http://www.gnu.org/licenses/gpl-3.0.txt
+  repository: https://github.com/guillaumeaubert/App-GitHooks-Plugin-PerlCompile
+version: v0.1.0

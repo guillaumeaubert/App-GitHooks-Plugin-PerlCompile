@@ -1,5 +1,14 @@
+Build.PL
+Changes
+LICENSE
+MANIFEST
+MANIFEST.SKIP
+META.json
+META.yml
+Makefile.PL
 README.md
 example/examples.txt
+ignore.txt
 lib/App/GitHooks/Plugin/PerlCompile.pm
 t/00-load.t
 t/03-get_file_check_description.t
