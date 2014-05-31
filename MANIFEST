@@ -3,3 +3,12 @@ t/00-load.t
 t/03-get_file_check_description.t
 t/05-get_file_pattern.t
 t/10-run.t
+xt/changes.t
+xt/kwalitee.t
+xt/manifest.t
+xt/module_versions.t
+xt/mojibake.t
+xt/perlcritic.t
+xt/pod-coverage.t
+xt/pod.t
+xt/unix_eol.t
