@@ -14,6 +14,7 @@ example/examples.txt
 ignore.txt
 lib/App/GitHooks/Plugin/PerlCompile.pm
 t/00-load.t
+t/01-git_version.t
 t/03-get_file_check_description.t
 t/05-get_file_pattern.t
 t/10-run.t
