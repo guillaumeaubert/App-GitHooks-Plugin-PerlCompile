@@ -41,7 +41,7 @@
    "provides" : {
       "App::GitHooks::Plugin::PerlCompile" : {
          "file" : "lib/App/GitHooks/Plugin/PerlCompile.pm",
-         "version" : "v1.0.0"
+         "version" : "v1.0.1"
       }
    },
    "release_status" : "stable",
@@ -57,5 +57,5 @@
          "url" : "https://github.com/guillaumeaubert/App-GitHooks-Plugin-PerlCompile"
       }
    },
-   "version" : "v1.0.0"
+   "version" : "v1.0.1"
 }

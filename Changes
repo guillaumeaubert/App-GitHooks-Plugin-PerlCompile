@@ -1,4 +1,9 @@
 Revision history for App-GitHooks-Plugin-PerlCompile
 
+v1.0.1  2014-06-08
+        - Noted git version in tests to help troubleshooting.
+        - Required git v1.7.4.1.
+        - Fixed typo in documentation.
+
 v1.0.0  2014-05-31
         - Public release.
