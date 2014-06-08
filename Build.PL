@@ -42,6 +42,7 @@ my $builder = $class->new(
 	build_requires       =>
 	{
 		'Capture::Tiny'        => 0,
+		'Git::Repository'      => 0,
 		'Test::Exception'      => 0,
 		'Test::FailWarnings'   => 0,
 		'Test::Git'            => 0,
