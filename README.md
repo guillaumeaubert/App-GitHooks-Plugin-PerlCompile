@@ -3,6 +3,7 @@ App-GitHooks-Plugin-PerlCompile
 
 [![Build Status](https://travis-ci.org/guillaumeaubert/App-GitHooks-Plugin-PerlCompile.svg?branch=master)](https://travis-ci.org/guillaumeaubert/App-GitHooks-Plugin-PerlCompile)
 [![Coverage Status](https://coveralls.io/repos/guillaumeaubert/App-GitHooks-Plugin-PerlCompile/badge.svg?branch=master)](https://coveralls.io/r/guillaumeaubert/App-GitHooks-Plugin-PerlCompile?branch=master)
+[![Latest Version](https://img.shields.io/github/tag/guillaumeaubert/App-GitHooks-Plugin-PerlCompile.svg?style=flat)](https://metacpan.org/release/App-GitHooks-Plugin-PerlCompile)
 
 App::GitHooks plugin to verify that Perl files compile without errors.
 
