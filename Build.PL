@@ -52,6 +52,7 @@ my $builder = $class->new(
 	requires             =>
 	{
 		'App::GitHooks'        => 0,
+		'File::Spec'           => 0,
 		'System::Command'      => 0,
 		'perl'                 => 5.010,
 	},

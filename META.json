@@ -33,6 +33,7 @@
       "runtime" : {
          "requires" : {
             "App::GitHooks" : "0",
+            "File::Spec" : "0",
             "System::Command" : "0",
             "perl" : "5.01"
          }

@@ -25,6 +25,7 @@ provides:
     version: v1.0.1
 requires:
   App::GitHooks: '0'
+  File::Spec: '0'
   System::Command: '0'
   perl: '5.01'
 resources:
