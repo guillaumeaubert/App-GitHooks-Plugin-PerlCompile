@@ -84,7 +84,7 @@ sub run_pre_commit_file
 
 	# Ignore deleted files.
 	return $PLUGIN_RETURN_SKIPPED
-			if $git_action eq 'D';
+		if $git_action eq 'D';
 
 	# Execute perl -cw.
 	my $path = $repository->work_tree() . '/' . $file;
@@ -93,14 +93,14 @@ sub run_pre_commit_file
 	# Retrieve the output.
 	my $output;
 	{
-			local $/ = undef;
-			$output = <$stderr>;
-			chomp( $output );
+		local $/ = undef;
+		$output = <$stderr>;
+		chomp( $output );
 	}
 
 	# Raise an exception if we didn't get "syntax OK".
 	die "$output\n"
-			if $output !~ /\Q$file syntax OK\E$/x;
+		if $output !~ /\Q$file syntax OK\E$/x;
 
 	return $PLUGIN_RETURN_PASSED;
 }
