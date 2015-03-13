@@ -1,5 +1,10 @@
 Revision history for App-GitHooks-Plugin-PerlCompile
 
+v1.0.2  2015-03-13
+        - Generalized path handling for non-Unix environments (GH-1).
+        - Cleaned up code formatting (GH-2).
+        - Removed unused dependency.
+
 v1.0.1  2014-06-08
         - Noted git version in tests to help troubleshooting.
         - Required git v1.7.4.1.
