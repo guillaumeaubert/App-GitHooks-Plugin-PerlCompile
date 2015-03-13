@@ -6,6 +6,7 @@ use warnings;
 use base 'App::GitHooks::Plugin';
 
 # External dependencies.
+use File::Spec qw();
 use System::Command;
 
 # Internal dependencies.
@@ -87,7 +88,7 @@ sub run_pre_commit_file
 		if $git_action eq 'D';
 
 	# Execute perl -cw.
-	my $path = $repository->work_tree() . '/' . $file;
+	my $path = File::Spec->catfile( $repository->work_tree(), $file );
 	my ( $pid, $stdin, $stdout, $stderr ) = System::Command->spawn( $^X, '-cw', $path );
 
 	# Retrieve the output.
