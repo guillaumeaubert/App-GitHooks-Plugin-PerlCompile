@@ -33,6 +33,25 @@ Version 1.0.2
 our $VERSION = '1.0.2';
 
 
+=head1 CONFIGURATION OPTIONS
+
+This plugin supports the following options in the C<[PerlCompile]> section of
+your C<.githooksrc> file.
+
+	[PerlCompile]
+	lib_paths = ./lib, ./t/lib
+
+
+=head2 lib_paths
+
+This option gives an opportunity to include other paths to Perl libraries, and
+in particular paths that are local to the current repository. It allows testing
+that the Perl files compile without having to amend PERL5LIB to include the
+repository-specific libraries.
+
+	lib_paths = ./lib, ./t/lib
+
+
 =head1 METHODS
 
 =head2 get_file_pattern()
@@ -82,14 +101,19 @@ sub run_pre_commit_file
 	my $git_action = delete( $args{'git_action'} );
 	my $app = delete( $args{'app'} );
 	my $repository = $app->get_repository();
+	my $config = $app->get_config();
 
 	# Ignore deleted files.
 	return $PLUGIN_RETURN_SKIPPED
 		if $git_action eq 'D';
 
+	# Prepare extra libs specified in .githooksrc.
+	my $lib_paths = $config->get( 'PerlCompile', 'lib_paths' );
+	my @lib = map { ( '-I', $_ ) } split( /\s*,\s*/, $lib_paths // '' );
+
 	# Execute perl -cw.
 	my $path = File::Spec->catfile( $repository->work_tree(), $file );
-	my ( $pid, $stdin, $stdout, $stderr ) = System::Command->spawn( $^X, '-cw', $path );
+	my ( $pid, $stdin, $stdout, $stderr ) = System::Command->spawn( $^X, '-cw', @lib, $path );
 
 	# Retrieve the output.
 	my $output;
