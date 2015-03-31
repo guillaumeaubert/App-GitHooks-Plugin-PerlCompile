@@ -1,5 +1,9 @@
 Revision history for App-GitHooks-Plugin-PerlCompile
 
+v1.1.0  2015-03-30
+        - Added config option 'lib_paths' to include local Perl libs not in
+          PERL5LIB.
+
 v1.0.2  2015-03-13
         - Generalized path handling for non-Unix environments (GH-1).
         - Cleaned up code formatting (GH-2).
