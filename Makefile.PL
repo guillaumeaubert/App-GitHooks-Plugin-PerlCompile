@@ -3,25 +3,25 @@ require 5.010;
 use ExtUtils::MakeMaker;
 WriteMakefile
 (
+  'NAME' => 'App::GitHooks::Plugin::PerlCompile',
   'test' => {
               'TESTS' => 't/*.t'
             },
-  'PL_FILES' => {},
-  'INSTALLDIRS' => 'site',
-  'NAME' => 'App::GitHooks::Plugin::PerlCompile',
   'EXE_FILES' => [],
-  'VERSION_FROM' => 'lib/App/GitHooks/Plugin/PerlCompile.pm',
+  'INSTALLDIRS' => 'site',
   'PREREQ_PM' => {
-                   'App::GitHooks' => 0,
-                   'Test::Requires::Git' => 1.005,
-                   'Test::Exception' => 0,
-                   'Capture::Tiny' => 0,
                    'Test::FailWarnings' => 0,
                    'File::Spec' => 0,
                    'Test::More' => '0.94',
-                   'Git::Repository' => 0,
+                   'Test::Requires::Git' => '1.005',
+                   'Test::Type' => 0,
+                   'Capture::Tiny' => 0,
+                   'Test::Exception' => 0,
+                   'App::GitHooks' => 0,
                    'System::Command' => 0,
-                   'Test::Type' => 0
-                 }
+                   'Git::Repository' => 0
+                 },
+  'VERSION_FROM' => 'lib/App/GitHooks/Plugin/PerlCompile.pm',
+  'PL_FILES' => {}
 )
 ;
