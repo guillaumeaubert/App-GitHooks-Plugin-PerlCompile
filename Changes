@@ -1,5 +1,10 @@
 Revision history for App-GitHooks-Plugin-PerlCompile
 
+v1.1.1  2016-05-21
+        - Switched to Test::Requires::Git instead of the now obsolete
+          Test::Git::has_git(). Thank you, Philippe Bruhat!
+        - Relicensed under Perl 5 terms.
+
 v1.1.0  2015-03-30
         - Added config option 'lib_paths' to include local Perl libs not in
           PERL5LIB.
